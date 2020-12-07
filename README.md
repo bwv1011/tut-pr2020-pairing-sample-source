@@ -33,12 +33,12 @@ https://github.com/scipr-lab/libff/archive/v1.0.0.zip からlibffをダウンロ
 
 ソースフォルダ直下で、次のコマンドを実行
 
-mkdir test && cd test
+	mkdir test && cd test
 
-curl -O https://raw.githubusercontent.com/bwv1011/tut-pr2020-pairing-sample-source/main/test_pairing.cpp
+	curl -O https://raw.githubusercontent.com/bwv1011/tut-pr2020-pairing-sample-source/main/test_pairing.cpp
 
-g++ test_pairing.cpp -L../install/lib -lff -lgmp -I../install/include
+	g++ test_pairing.cpp -L../install/lib -lff -lgmp -I../install/include
 
-./a.exe
+	./a.exe
 
 Successfulが出たらOK.
