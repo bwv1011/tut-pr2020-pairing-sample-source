@@ -1,8 +1,8 @@
 #include <libff/algebra/curves/alt_bn128/alt_bn128_pp.hpp>
 #include <iostream>
-#include <cassert>
 
 using namespace libff;
+using namespace std;
 
 template<typename ppT>
 void test_pairing(){
@@ -26,10 +26,10 @@ void test_pairing(){
     ans1 = ppT::reduced_pairing(sP,Q);
     ans2 = ppT::reduced_pairing(P,sQ);
 
-    assert(ans1 == ans2);
-
-    ans1.print();
-
+    if(ans1 == ans2)
+        cout << "Successful" << endl;
+    else
+        cout << "Failed" << endl;
 }
 
 int main(void)
