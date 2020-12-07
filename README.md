@@ -8,15 +8,25 @@ Cygwin上で適当な作業フォルダに移動
 
 https://github.com/scipr-lab/libff/archive/v1.0.0.zip からlibffをダウンロードして解凍
 
+
+
 ◯ libffのライブラリ(libff.a)の生成
+
 ソースフォルダ直下のCMakeLists.txtを以下のように修正
+
 	12行目 : "BN128" -> "ALT_BN128"
+	
 	230行目 : add_subdirectory(depends) -> # add_subdirectory(depends)
+	
 
 ソースフォルダ直下で、次のコマンドを実行
+
 mkdir build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=../install
+
 make
+
 make install
+
 cd ../
 
 ◯ libff.aを用いたサンプルソースの実行
