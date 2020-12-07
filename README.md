@@ -6,7 +6,7 @@ libssl-devel, libboost-devel, libgmp-devel, libprocps-devel
 
 Cygwin上で適当な作業フォルダに移動
 
-"https://github.com/scipr-lab/libff/archive/v1.0.0.zip"からlibffをダウンロードして解凍
+https://github.com/scipr-lab/libff/archive/v1.0.0.zip からlibffをダウンロードして解凍
 
 ◯ libffのライブラリ(libff.a)の生成
 ソースフォルダ直下のCMakeLists.txtを以下のように修正
