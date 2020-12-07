@@ -15,7 +15,7 @@ https://github.com/scipr-lab/libff/archive/v1.0.0.zip からlibffをダウンロ
 ソースフォルダ直下のCMakeLists.txtを以下のように修正
 
 	12行目 : "BN128" -> "ALT_BN128"
-	
+	63行目 : ON -> OFF
 	230行目 : add_subdirectory(depends) -> # add_subdirectory(depends)
 	
 
