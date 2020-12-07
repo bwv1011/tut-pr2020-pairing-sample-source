@@ -21,13 +21,13 @@ https://github.com/scipr-lab/libff/archive/v1.0.0.zip からlibffをダウンロ
 
 ソースフォルダ直下で、次のコマンドを実行
 
-mkdir build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=../install
+	mkdir build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=../install
 
-make
+	make
 
-make install
+	make install
 
-cd ../
+	cd ../
 
 ◯ libff.aを用いたサンプルソースの実行
 
