@@ -4,5 +4,5 @@
 
 次のコマンドでtest_sha512.cppをコンパイルして関数が呼べるか確認
 
-> g++ test_sha512.cpp -L../install/lib -lff -lgmp -I../install/include -I/cygdrive/c/openssl/install/include
+> g++ test_sha512.cpp -L../install/lib -lff -lgmp -I../install/include -I/cygdrive/c/openssl/install/include -L/cygdrive/c/openssl/install/lib -lcrypto
 
