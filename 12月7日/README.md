@@ -37,7 +37,7 @@ https://github.com/scipr-lab/libff/archive/v1.0.0.zip からlibffをダウンロ
 
 	mkdir test && cd test
 
-	curl -O https://raw.githubusercontent.com/bwv1011/tut-pr2020-pairing-sample-source/main/test_pairing.cpp
+	curl -O curl -O https://raw.githubusercontent.com/bwv1011/tut-pr2020-pairing-sample-source/main/12%E6%9C%887%E6%97%A5/test_pairing.cpp
 
 	g++ test_pairing.cpp -L../install/lib -lff -lgmp -I../install/include
 
