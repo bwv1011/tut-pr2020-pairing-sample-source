@@ -2,7 +2,7 @@
 
 次のパッケージをCygwinにインストール
 
-	g++, cmake, git, make, libssl-devel, libboost-devel, libgmp-devel, libprocps-devel, chere(任意)
+	g++, make, cmake, git, libssl-devel, libboost-devel, libgmp-devel, chere(任意)
 
 
 
