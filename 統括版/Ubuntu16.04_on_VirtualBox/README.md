@@ -8,4 +8,5 @@ VirtualBoxのダウンロードWebページから、VirtualBox本体とExtension
 ## Ubuntuが設定済みのディスクイメージをインストール
 
 VirtualBox上で動作検証済みのUbuntuの仮想マシンを[ここ](https://www.dropbox.com/s/b4alxys3yjvmkhv/ubuntu16.04%2864bit%29_libff.ova?dl=0)からダウンロード
+
 [このサイト](https://pc-karuma.net/virtualbox-import-vm-appliance/ "")を参考にして、仮想マシンをインポート
