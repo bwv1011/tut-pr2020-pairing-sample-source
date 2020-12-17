@@ -15,6 +15,7 @@ Fq<ppT> Montgomery_reduction(Fq<ppT> &t){
     return tmp;
 }
 
+// 拡大体Fqkを16進数にした時のサイズを得る
 template<typename ppT>
 int get_Fqk_hex_len(){
     Fq<ppT> g;
@@ -23,6 +24,7 @@ int get_Fqk_hex_len(){
     return mp_limb_t_size * words_num * Fqk<ppT>::extension_degree();
 }
 
+// 素体Fqの配列をまとめた16進数の配列を得る
 template<typename ppT>
 void get_hex_from_FqArray(unsigned char *out, Fq<ppT> in[], int in_len){
     int mp_limb_t_size = sizeof(mp_limb_t);
@@ -53,6 +55,7 @@ void get_hex_from_FqArray(unsigned char *out, Fq<ppT> in[], int in_len){
     return;
 }
 
+// 拡大体Fqkを16進数にした値を得る
 template<typename ppT>
 unsigned char* get_hex_from_Fqk(Fqk<ppT> &g, Fq<ppT>* (*get_FqArray_from_Fqk)(Fqk<ppT>&)){
     Fq<ppT> *FqArray =  get_FqArray_from_Fqk(g); 

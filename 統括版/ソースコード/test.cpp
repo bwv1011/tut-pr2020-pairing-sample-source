@@ -66,26 +66,6 @@ void test_sha(){
 
 /************* for element2hex's test *************/
 #include "my_element2hex.hpp"
-template<typename ppT>
-Fq<ppT>* get_FqArray_from_Fq12(Fqk<ppT>& in){
-    int k = in.extension_degree();
-    Fq<ppT> *FqArray = new Fq<ppT>[k];
-
-    FqArray[0] = in.c0.c0.c0;
-    FqArray[1] = in.c0.c0.c1;
-    FqArray[2] = in.c0.c1.c0;
-    FqArray[3] = in.c0.c1.c1;
-    FqArray[4] = in.c0.c2.c0;
-    FqArray[5] = in.c0.c2.c1;
-    FqArray[6] = in.c1.c0.c0;
-    FqArray[7] = in.c1.c0.c1;
-    FqArray[8] = in.c1.c1.c0;
-    FqArray[9] = in.c1.c1.c1;
-    FqArray[10] = in.c1.c2.c0;
-    FqArray[11] = in.c1.c2.c1;
-
-    return FqArray;
-}
 
 template<typename ppT>
 void test_element2hex(){
@@ -99,7 +79,7 @@ void test_element2hex(){
     int words_num = g.c0.c0.c0.mont_repr.N;
     int N = mp_limb_t_size*words_num;
     int k = GT<ppT>::extension_degree();
-    print_hex_array(hex_of_Fqk, N*k, N, "Fq12's hex list:");
+    print_hex_array(hex_of_Fqk, N*k, N, "Fq12's hex:");
 
     free(hex_of_Fqk);
     

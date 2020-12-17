@@ -20,6 +20,7 @@ void Joux_protocol(){
     G1<ppT> P = G1<ppT>::one();
     G2<ppT> Q = G2<ppT>::one();
 
+    /********* 3人のユーザー A, B, C は、ぞれぞれ自分の秘密鍵と公開鍵を生成 *********/
     Fr<ppT> a = Fr<ppT>::random_element(); // A's secret key
     G1<ppT> PA = a * P;                    // A's public key 1
     G2<ppT> QA = a * Q;                    // A's public key 2
@@ -31,9 +32,11 @@ void Joux_protocol(){
     Fr<ppT> c = Fr<ppT>::random_element(); // C's secret key
     G1<ppT> PC = c * P;                    // C's public key 1 
     G2<ppT> QC = c * Q;                    // C's public key 2
-    
-    // Share above public keys.
+    /********* A,B,Cはお互いの公開鍵を交換する *********/
 
+
+
+    /********* 交換で受け取った相手の公開鍵と自分の秘密鍵から共通の値を計算 *********/
     GT<ppT> A_SharedValue =  Fw<ppT>(a,PB,QC);
     GT<ppT> B_SharedValue =  Fw<ppT>(b,PA,QC);
     GT<ppT> C_SharedValue =  Fw<ppT>(c,PA,QB);
@@ -44,17 +47,17 @@ void Joux_protocol(){
     int K_len = get_Fqk_hex_len<ppT>();
     int k = GT<ppT>::extension_degree();
 
-    assert(hexcmp(A_SharedValue_hex, B_SharedValue_hex, K_len));
-    assert(hexcmp(B_SharedValue_hex, C_SharedValue_hex, K_len));
-
     unsigned char *A_SharedSecret = (unsigned char *)malloc(HASH_SIZE);
     unsigned char *B_SharedSecret = (unsigned char *)malloc(HASH_SIZE);
     unsigned char *C_SharedSecret = (unsigned char *)malloc(HASH_SIZE);
 
+    /******* ペアリング値をハッシュに入力して共有秘密鍵を得る *******/
     my_SHA(A_SharedSecret, A_SharedValue_hex, K_len);
     my_SHA(B_SharedSecret, B_SharedValue_hex, K_len);
     my_SHA(C_SharedSecret, C_SharedValue_hex, K_len);
 
+
+    /******* 共有秘密鍵が一致しているか確認　*******/
     assert(hexcmp(A_SharedSecret, B_SharedSecret, HASH_SIZE));
     assert(hexcmp(B_SharedSecret, C_SharedSecret, HASH_SIZE));
 
