@@ -10,6 +10,7 @@
 using namespace libff;
 using namespace std;
 
+// e(R,S)^x を計算
 template<typename ppT>
 GT<ppT> Fw(Fr<ppT> x, G1<ppT> R, G2<ppT> S){
     return ppT::reduced_pairing(R,S)^x;
@@ -41,11 +42,10 @@ void Joux_protocol(){
     GT<ppT> B_SharedValue =  Fw<ppT>(b,PA,QC);
     GT<ppT> C_SharedValue =  Fw<ppT>(c,PA,QB);
 
-    unsigned char *A_SharedValue_hex = get_hex_from_Fqk<ppT>(A_SharedValue, get_FqArray_from_Fq12<ppT>);
-    unsigned char *B_SharedValue_hex = get_hex_from_Fqk<ppT>(B_SharedValue, get_FqArray_from_Fq12<ppT>);
-    unsigned char *C_SharedValue_hex = get_hex_from_Fqk<ppT>(C_SharedValue, get_FqArray_from_Fq12<ppT>);
+    unsigned char *A_SharedValue_hex = get_hex_from_pairing_value(A_SharedValue);
+    unsigned char *B_SharedValue_hex = get_hex_from_pairing_value(B_SharedValue);
+    unsigned char *C_SharedValue_hex = get_hex_from_pairing_value(C_SharedValue);
     int K_len = get_Fqk_hex_len<ppT>();
-    int k = GT<ppT>::extension_degree();
 
     unsigned char *A_SharedSecret = (unsigned char *)malloc(HASH_SIZE);
     unsigned char *B_SharedSecret = (unsigned char *)malloc(HASH_SIZE);

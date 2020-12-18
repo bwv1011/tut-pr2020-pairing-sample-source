@@ -1,3 +1,6 @@
+#ifndef MY_ELEMENT2HEX_HPP_
+#define MY_ELEMENT2HEX_HPP_
+
 #include <libff/algebra/curves/alt_bn128/alt_bn128_pp.hpp>
 #include <libff/common/profiling.hpp>
 #include <iostream>
@@ -72,7 +75,7 @@ unsigned char* get_hex_from_Fqk(Fqk<ppT> &g, Fq<ppT>* (*get_FqArray_from_Fqk)(Fq
 }
 
 
-/******************** get_FqArray_from_Fq12 for alt_bn128_pp ********************/
+/******************** get_hex_from_Fqk for alt_bn128_pp ********************/
 template<typename ppT>
 Fq<ppT>* get_FqArray_from_Fq12(Fqk<ppT>& g){
     int k = g.extension_degree();
@@ -93,3 +96,7 @@ Fq<ppT>* get_FqArray_from_Fq12(Fqk<ppT>& g){
 
     return FqArray;
 }
+
+#define get_hex_from_pairing_value(x) get_hex_from_Fqk<ppT>(x, get_FqArray_from_Fq12<ppT>)
+
+#endif
