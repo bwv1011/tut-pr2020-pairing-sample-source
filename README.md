@@ -7,3 +7,9 @@ VirtualBoxをインストールして配布している仮想マシンをダウ�
 
 また、「統括版」にこれまでの統括と一部修正、Jouxのプロトコルの実装例をまとめてます。
 詳細は後日まとめます。
+
+# 実装するプロトコル
+
+Boeh・Boyen：https://crypto.stanford.edu/~dabo/pubs/papers/bbsigs.pdf
+境・笠原：クラウドを支えるこれからの暗号技術の15.5章
+AKE：https://eprint.iacr.org/2004/122.pdf
