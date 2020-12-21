@@ -12,6 +12,6 @@ VirtualBoxをインストールして配布している仮想マシンをダウ�
 
 Boneh-Boyen署名：https://crypto.stanford.edu/~dabo/pubs/papers/bbsigs.pdf
 
-境-笠原IDベース暗号：光成滋生著「クラウドを支えるこれからの暗号技術」の15.5章
+境-笠原IDベース暗号：https://eprint.iacr.org/2005/226.pdf    (光成滋生著「クラウドを支えるこれからの暗号技術」の15.5章)
 
 McCullagh-Barreto IDベース認証鍵交換：https://eprint.iacr.org/2004/122.pdf
