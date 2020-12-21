@@ -11,5 +11,7 @@ VirtualBoxをインストールして配布している仮想マシンをダウ�
 # 実装するプロトコル
 
 Boeh・Boyen：https://crypto.stanford.edu/~dabo/pubs/papers/bbsigs.pdf
+
 境・笠原：クラウドを支えるこれからの暗号技術の15.5章
-AKE：https://eprint.iacr.org/2004/122.pdf
+
+鍵交換：https://eprint.iacr.org/2004/122.pdf
