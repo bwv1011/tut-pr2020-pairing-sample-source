@@ -14,3 +14,5 @@ VirtualBox上で動作検証済みのUbuntuの仮想マシンを[ここ](https:/
 ## Ubuntuの起動
 ユーザ名：pr2020
 パスワード：pr2020
+
+管理者(root)のパスワード：root
